@@ -5,7 +5,7 @@ class ArrayTest extends PHPUnit_Framework_TestCase
     {
         $subject = array();
 
-        $this->assertEquals(0, sizeof($subject));
+        $this->assertThat(sizeof($subject), $this->equalTo(0));
     }
 
     public function testArrayContainsAnElement()
@@ -13,7 +13,7 @@ class ArrayTest extends PHPUnit_Framework_TestCase
         $subject = array();
         $subject[] = 'Element';
 
-        $this->assertEquals(1, sizeof($subject));
+        $this->assertThat(sizeof($subject), $this->equalTo(1));
     }
 }
 ?>
